@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Lista de Ingredientes</h2>
+
+<form method="post">
+    Nombre: <input type="text" name="nombre" required>
+    Cantidad: <input type="text" name="cantidad" required>
+    <br>
+    Calorias: <input type="numeric" name="calorias" required>
+    Precio: <input type="numeric" name="precio" required>
+    <br>
+    Es vegetariano: <input type="checkbox" name="vegetariano" >
+    Es sano: <input type="checkbox" name="sano" >
+    <br>
+    sabor: <input type="text" name="sano">
+    <br>
+    <br>
+    
+    <button type="submit">Agregar Ingrediente</button>
+</form>
+
+<ul>
+{% for ingrediente in ingredientes %}
+    <li>{{ ingrediente.nombre }} - {{ ingrediente.inventario }} -{{ingrediente.sabor}}</li>
+{% endfor %}
+</ul>
+{% endblock %}
