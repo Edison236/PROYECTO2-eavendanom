@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Lista de Productos</h2>
+
+<h1>Seleccione un Producto</h1>
+<form method="post">
+    <h2>Elija un producto:</h2>
+    <select name="producto" id="producto" class="selectAdjust">
+        {% for producto in productos %}
+            <option value="{{ producto.nombre }}">{{ producto.nombre }} - ${{ producto.precio_publico }}</option>
+        {% endfor %}
+    </select>
+    <br>
+
+    <h2>Agregar ingredientes:</h2>
+    
+    Nombre:<br>
+    <input type="text" name="nombre" required>
+    
+    Cantidad:<br>
+    <input type="text" name="cantidad" required>
+
+    Sabor:<br>
+    <input type="text" name="sabor">
+    
+    <br><br>
+    <button type="submit">Agregar Producto</button>
+</form>
+{% endblock %}

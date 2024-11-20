@@ -3,21 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Proyecto</title>
+    <title>Heladería la demora</title>
+    <!-- Estilos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/style_ingredientes.css">
+    <link rel="stylesheet" href="../static/css/style_base.css">
+    <link rel="stylesheet" href="../static/css/style_vender.css">
 </head>
 <body>
     <header>
-        <h1>Gestión de Productos e Ingredientes</h1>
+        <h1>HELADERIA LA DEMORA</h1>
         <nav>
-            <a href="/productos/nuevo">Agregar Producto</a>
-            <a href="/ingredientes/nuevo">Agregar Ingrediente</a>
-            <a href="/productos">Ver Productos</a>
-            <a href="/ingredientes">Ver Ingredientes</a>
+            <ul>
+                <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="/productos/vender">Vender producto</a></li>
+                <li><a href="/productos/nuevo">Agregar Producto</a></li>
+                <li><a href="/ingredientes/nuevo">Agregar Ingrediente</a></li>
+                <li><a href="/productos">Ver Productos</a></li>
+                <li><a href="/ingredientes">Ver Ingredientes</a></li>
+            </ul>
         </nav>
     </header>
-    
+
     <div class="content">
-        {% block content %}{% endblock %}
+        {% block content %}
+        <img src="../static/img/store.jpg" class="responsiveImg">
+        {% endblock %}
     </div>
+
+    <footer>
+        <p>&copy; 2024 Heladería la demora. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>

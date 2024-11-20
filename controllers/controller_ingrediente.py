@@ -15,7 +15,7 @@ def crear_ingrediente():
     if request.method == 'POST':
         data = request.form  # Usando formularios HTML en lugar de JSON para este ejemplo.
         print(data)
-        nuevo_ingrediente = Base(nombre=data['nombre'], precio = data['precio'], calorias_por_porcion = data['calorias'], inventario = data['cantidad'], es_vegetariano =  0, es_sano = 0, sabor = data['sano'])
+        nuevo_ingrediente = Base(nombre=data['nombre'], precio = data['precio'], calorias_por_porcion = data['calorias'], inventario = data['cantidad'], es_vegetariano =  0, es_sano = 0, sabor = '')
         db.session.add(nuevo_ingrediente)
         db.session.commit()
         return render_template('ingrediente.html', ingredientes=Ingrediente.query.all())

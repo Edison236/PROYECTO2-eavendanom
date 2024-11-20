@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 from dotenv import load_dotenv
 from database.db import db,init_db
-from models import ingrediente,producto,base,complemento
+from models import ingrediente,producto,base,complemento,malteada,copa
 from controllers.controller_ingrediente import ingrediente_bp
 from controllers.controller_producto import producto_bp
 
